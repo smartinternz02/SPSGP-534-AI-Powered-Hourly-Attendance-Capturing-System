@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Defining stats function 
 def stats():
-    url = "https://j5blqfss4j.execute-api.us-east-2.amazonaws.com/attendance_count/getcount"
+    url = "https://vny5iyyx1k.execute-api.us-east-2.amazonaws.com/count/getcount"
     # Change the above url with your API Url
     response = requests.get(url)
     # Converting the json format

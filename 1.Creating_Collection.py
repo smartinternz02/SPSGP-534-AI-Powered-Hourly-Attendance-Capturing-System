@@ -3,12 +3,11 @@ import boto3
 import csv
 
 # Create client 
-client  = boto3.client('rekognition',
-                       aws_access_key_id = "AKIA2QI47CMUMJL6LW6D",
-                       aws_secret_access_key = "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",
-                                             region_name = 'us-east-2'
-                       )
-
+client  = boto3.client('rekognition',\n",
+                           aws_access_key_id = \"AKIA3S3TYBBZMYEBGUNI\",\n",
+                           aws_secret_access_key = \"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\",\n",
+                                                 region_name = 'us-east-2'\n",
+                           )
 def create_collection(collection_id): 
 
     #Create a collection

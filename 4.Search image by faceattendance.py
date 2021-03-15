@@ -12,16 +12,17 @@ video_capture = cv2.VideoCapture(0)
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') # xml file to detect the faces 
 
 # Creation of client to rekognition Service
-client  = boto3.client('rekognition',
-                       aws_access_key_id = "AKIA2QI47CMUMJL6LW6D",
-                       aws_secret_access_key = "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",
-                                             region_name = 'us-east-2')
+client  = boto3.client('rekognition',\n",
+                           aws_access_key_id = \"AKIA3S3TYBBZMYEBGUNI\",\n",
+                           aws_secret_access_key = \"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\",\n",
+                                                 region_name = 'us-east-2'\n",
+                           )
 # Creation of client to S3 Service
-s3client  = boto3.client('s3',
-                       aws_access_key_id = "AKIA2QI47CMUMJL6LW6D",
-                       aws_secret_access_key = "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",
-                                             region_name = 'us-east-1'
-                       )
+s3client  = boto3.client('s3',\n",
+                           aws_access_key_id = \"AKIA3S3TYBBZMYEBGUNI\",\n",
+                           aws_secret_access_key = \"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\",\n",
+                                                 region_name = 'us-east-2'\n",
+                           )
 
 # Declaring global Variables 
 global name,period,url
@@ -74,7 +75,7 @@ def photo():
             else:
                 period = "Period3"
             # Hitting API Gateway url to send captured image name & period
-            url = "https://70htd9zo98.execute-api.us-east-2.amazonaws.com/attendance_input?name="+name+"&period="+period
+            url = "https://z8lugn4i15.execute-api.us-east-2.amazonaws.com/attendance_input?name="+name+"&period="+period
             status = requests.request("GET",url)
             print(status.json())
             print("uploaded to DB")
